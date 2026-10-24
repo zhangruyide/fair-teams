@@ -1,0 +1,53 @@
+{
+  "name": "fair-teams",
+  "version": "0.1.0",
+  "description": "Zero-dependency fair grouping: split participants into even teams while balancing tags (gender, skill, positions) across every team.",
+  "type": "module",
+  "license": "MIT",
+  "author": "zhangruyide",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangruyide/fair-teams.git"
+  },
+  "homepage": "https://github.com/zhangruyide/fair-teams#readme",
+  "bugs": {
+    "url": "https://github.com/zhangruyide/fair-teams/issues"
+  },
+  "keywords": [
+    "random group generator",
+    "team generator",
+    "balanced groups",
+    "fair teams",
+    "grouping",
+    "gender balance",
+    "classroom",
+    "education",
+    "shuffle",
+    "pe"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
